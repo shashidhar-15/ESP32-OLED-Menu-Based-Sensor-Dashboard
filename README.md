@@ -4,6 +4,7 @@ A menu-based embedded system built on ESP32 that lets you monitor environmental 
 
 No physical buttons. No clutter. Just clean interaction.
 
+---
 
 ## What It Does
 
@@ -15,6 +16,7 @@ No physical buttons. No clutter. Just clean interaction.
   - Light level (LDR)
 - Control a relay (ON/OFF) directly from the menu
 
+---
 
 ## Why This Is Different From a Basic Sensor Project
 
@@ -25,6 +27,7 @@ Most beginner ESP32 projects just print sensor values to serial monitor. This on
 - OLED as a real UI, not just a display
 - Serial keyboard replaces physical buttons entirely
 
+---
 
 ## Hardware Used
 
@@ -36,6 +39,7 @@ Most beginner ESP32 projects just print sensor values to serial monitor. This on
 | LDR | Light level sensing |
 | Relay Module | Switchable output control |
 
+---
 
 ## Navigation Keys
 
@@ -46,6 +50,7 @@ Most beginner ESP32 projects just print sensor values to serial monitor. This on
 | `E` | Select / Enter |
 | `B` | Back |
 
+---
 
 ## System Flow
 
@@ -61,6 +66,21 @@ OLED refreshes display
 Selected function runs (sensor read / relay toggle)
 ```
 
+---
+
+## Project Structure
+
+```
+esp32-sensor-dashboard/
+├── src/
+│   └── main.ino          # Main ESP32 code
+├── images/
+│   └── circuit.jpg       # Wiring diagram (add your own)
+├── README.md
+└── LICENSE
+```
+
+---
 
 ## Setup Instructions
 
@@ -95,6 +115,7 @@ In Arduino IDE, install the following:
 - Set baud rate to `115200`
 - Use keyboard to navigate the menu
 
+---
 
 ## Debugging Notes
 
@@ -105,6 +126,16 @@ During development, the OLED failed to initialize. The fix process:
 3. Tested with isolated OLED test sketch
 4. Updated address in code
 
+---
+
+## Possible Extensions
+
+- Auto relay trigger based on temperature threshold
+- Data logging over serial to CSV
+- Wi-Fi based remote monitoring (ESP32 has it built in)
+- MQTT integration for IoT dashboards
+
+---
 
 ## What I Learned
 
@@ -112,3 +143,5 @@ During development, the OLED failed to initialize. The fix process:
 - Integrating multiple sensors on one microcontroller
 - Replacing hardware input (buttons) with software input (serial)
 - Real hardware debugging — I2C address scanning, wiring checks, isolation testing
+
+---
